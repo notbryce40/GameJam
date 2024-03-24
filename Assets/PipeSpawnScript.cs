@@ -28,9 +28,7 @@ public class PipeSpawnScript : MonoBehaviour
             spawnPipe();
             timer = 0;
         }
-        
     }
-
     
     void spawnPipe()
     {
@@ -39,5 +37,4 @@ public class PipeSpawnScript : MonoBehaviour
 
         Instantiate(pipe, new Vector3(transform.position.x, Random.Range(lowestPoint, highestPoint), 0), transform.rotation);
     }
-    
 }
