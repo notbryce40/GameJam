@@ -48,6 +48,11 @@ public class LogicScript : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
     public void gameOver()
     {
         gameOverScreen.SetActive(true);

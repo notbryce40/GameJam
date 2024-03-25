@@ -12,7 +12,7 @@ TagManager:
   - Bird
   - Water
   - UI
-  - 
+  - Posters
   - 
   - 
   - 
@@ -41,4 +41,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Posters
+    uniqueID: 2342160189
     locked: 0
