@@ -2,18 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Background : MonoBehaviour
+public class PipeSpawnScript : MonoBehaviour
 {
-    public GameObject poster1;
-    //public Sprite poster2;
-    public float spawnRate = 7;
+    public GameObject pipe;
+    public float spawnRate = 4;
     private float timer = 0;
-    public float heightOffset = 0;
+    public float heightOffset = 8;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        SpawnPoster();
+        spawnPipe();
     }
 
     // Update is called once per frame
@@ -25,18 +25,16 @@ public class Background : MonoBehaviour
         }
         else
         {
-            SpawnPoster();
+            spawnPipe();
             timer = 0;
         }
     }
-
-
-    void SpawnPoster()
+    
+    void spawnPipe()
     {
         float lowestPoint = transform.position.y - heightOffset;
         float highestPoint = transform.position.y + heightOffset;
 
-        Instantiate(poster1, new Vector3(transform.position.x, transform.position.y, 0), transform.rotation);
-        //Instantiate(poster2, new Vector3(transform.position.x, transform.position.y, 0), transform.rotation);
+        Instantiate(pipe, new Vector3(transform.position.x, Random.Range(lowestPoint, highestPoint), 0), transform.rotation);
     }
 }
